@@ -28,6 +28,20 @@
     transform: rotate(360deg);
   }
 } */
+
 * {
   font-family: Aquire;
+}
+
+.page,
+.education {
+  padding: 80px 100px 100px 50px;
+}
+
+.toggle {
+  background-color: red;
+  top: 300px;
+  opacity: 100;
+}
+.notoggle {
 }

@@ -11,7 +11,7 @@ function WorkandExperiencePage() {
     <React.Fragment>
       {/* <div className='m-4'>
             </div> */}
-      <div className="pt-16">
+      <div className="pt-16 page">
         <section className="experience my-4">
           <h1 className="text-3xl ml-2">Experience</h1>
           <ol class="relative border-l border-gray-200 dark:border-gray-700 ml-4">
