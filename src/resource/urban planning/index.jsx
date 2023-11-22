@@ -28,7 +28,7 @@ import img24 from "./C0.jpg";
 import img25 from "./C1.png";
 import img26 from "./C2.png";
 import img27 from "./C3.png";
-import img28 from "./p1.png";
+// import img28 from "./p1.png";
 import img29 from "./p2.png";
 import img30 from "./p3.png";
 import img31 from "./p4.png";
@@ -133,9 +133,9 @@ export const OakVille = [
   {
     src: img27,
   },
-  {
-    src: img28,
-  },
+  // {
+  //   src: img28,
+  // },
   {
     src: img29,
   },

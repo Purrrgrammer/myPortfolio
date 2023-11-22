@@ -23,13 +23,10 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 3rem;
 }
 
 .img-class,
 .img-class-sm {
-  /* height: 400px;
-  width: 100px; */
   transition: width 0.7s;
   position: relative;
 }

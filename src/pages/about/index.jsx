@@ -6,7 +6,7 @@ function AboutPage() {
     <>
       <Navbar />
       <div className="pt-16 page">
-        <div className="m-4 p-[80px]">
+        <div className="m-4 p-2 lg:p-10 text-base lg:text-3xl ">
           A College graduate equipped with comprehensive aspect of real estate
           market analysis, project management for real estate development,
           feasibility, facility management, and graphic desinging. For extent,

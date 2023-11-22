@@ -8,15 +8,17 @@ function HomePage() {
       <Navbar />
       <div className="pt-16">
         <div className='bg-[url("https://e1.pxfuel.com/desktop-wallpaper/18/270/desktop-wallpaper-1-batcave-batman-cave.jpg")] bg-cover h-full'>
-          <div className="flex flex-row justify-between items-center ml-14 md:ml-28 lg:ml-28">
+          <div className="flex flex-row justify-between items-center ml-14 md:ml-28 lg:ml-28 py-4">
             <div>
-              <h1 className="text-white text-5xl ">Hello, World !</h1>
+              <h1 className="text-white text-4xl lg:text-5xl ">
+                Hello, World !
+              </h1>
             </div>
             <div className="">
-              <h1 className="text-white xl:text-5xl">
+              <h1 className="text-white text-lg lg:text-5xl">
                 I'm Woramongkol Vichayaworanan
               </h1>
-              <p className="text-white text-lg">
+              <p className="text-white text-lg lg:text-5xl">
                 a frontend developer based in Bangkok, Thailand.
               </p>
             </div>
@@ -29,19 +31,22 @@ function HomePage() {
             </div>
           </div>
         </div>
-        <section className="softwareskill p-12">
+        <section className="softwareskill py-20">
           {softwareSkills.map((el) => (
-            <div className="py-5">
-              <h1 className="text-center text-lg lg:text-3xl xl:text-5xl my-12 ">
+            <div className="my-5">
+              <h1 className="text-center text-lg lg:text-3xl my-4 md:my-12 ">
                 {el.name}
               </h1>
-              <div className="flex flex-row items-center justify-around ">
+              <div className="flex flex-row items-center justify-center">
                 {el.skills.map((language, index) => (
-                  <div key={index} className="mx-2">
+                  <div
+                    key={index}
+                    className="mx-10 hover:scale-125 transition transition ease-in-out"
+                  >
                     <img
                       src={language.url}
                       alt={language.name}
-                      className="h-20"
+                      className="h-10 md:h-20"
                     />
                   </div>
                 ))}

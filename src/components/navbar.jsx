@@ -7,10 +7,11 @@ function Navbar() {
   const [isToggle, setIsToggle] = useState(false);
 
   useEffect(() => {
-    if (window.innerWidth > 720) {
+    if (window.innerWidth >= 768) {
+      // if (window.innerWidth > 720) {
       setIsToggle(true);
     }
-    if (window.innerWidth < 720) {
+    if (window.innerWidth < 768) {
       setIsToggle(false);
     }
     window.addEventListener("resize", () =>
@@ -39,7 +40,7 @@ function Navbar() {
   ];
 
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900 w-full fixed max-x-screen-xl flex justify-between flex-wrap items-center mx-auto p-4 px-[100px] z-2">
+    <nav className="z-10 bg-white border-gray-200 dark:bg-gray-900 w-screen fixed flex justify-between flex-wrap items-center mx-auto p-4 px-[25px] lg:px-[100px] max-x-screen-xl">
       <a href="/home">
         <img
           src="/resources/Pictures/WVBrandnameStoreAI.png"
@@ -47,14 +48,14 @@ function Navbar() {
           alt="WVLogo"
         />
       </a>
-      <span className="text-3xl cursor-ponter md:hidden block">
+      <span className="text-3xl cursor-ponter md:hidden block z-20">
         <ion-icon name="menu-outline" onClick={toggle}></ion-icon>
       </span>
       <ul
         className={`
         ${
-          isToggle ? "-bottom-28 opacity-100 " : "opacity-0 -top-30"
-        } my-2 trasnsition-all ease-in duration-500 absolute w-full md:py-4 left-0 md:w-auto md:static z-[-1] md:-top-120px md:z-auto md:flex md:items-center md:p-0 md:dark:bg-gray-900 md:flex-row md:space-x-8 md:mt-0 flex-col font-medium p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:border-0 bg-white md:bg-gray dark:bg-gray-800 dark:border-gray-700`}
+          isToggle ? "-bottom-28 opacity-100 " : "opacity-0 -top-40"
+        } border-t-0 my-2 trasnsition-all ease-in duration-500 absolute w-full md:py-4 left-0 md:w-auto md:static z-[-1] md:-top-120px md:z-auto md:flex md:items-center md:p-0 md:dark:bg-gray-900 md:flex-row md:space-x-8 md:mt-0 flex-col font-medium p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:border-0 bg-white md:bg-gray dark:bg-gray-800 dark:border-gray-700`}
       >
         {links.map((link, index) => (
           <li className="px-2" key={index}>
@@ -74,14 +75,14 @@ function Navbar() {
             </NavLink>
           </li>
         ))}
-        <li className="relative flex justify-center items-center ">
+        <li className="relative flex justify-center items-center z-2 ">
           <button
             className="
                         relative flex justify-center items-center
                         text-black rounded focus-ring ring-gray-200 group
                         "
           >
-            <p className="px-2 group text-black transition duration-300 hover:text-gray-400">
+            <p className="px-2 group text-black transition duration-300 hover:text-gray-400 ">
               contact
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black m-auto"></span>
             </p>
@@ -101,7 +102,7 @@ function Navbar() {
                 />
               </svg>
             </span>
-            <div className="absolute hidden group-focus:block top-full min-w-full w-max bg-wh ite shadow-md mt-1 rounded transition">
+            <div className="absolute hidden group-focus:block top-full min-w-full w-max shadow-md mt-1 rounded transition bg-white">
               <ul className="text-left border rounded">
                 {mediaChannel.map((link, index) => (
                   <li

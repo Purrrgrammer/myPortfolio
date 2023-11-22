@@ -10,7 +10,7 @@ const Root = () => {
         <Navbar />
       </header>
       <main>
-        <div className="p-48">
+        <div className="p-48 xl:text-5xl md:text-3xl sm:text-3xl">
           <Greetings />
         </div>
         <div id="detail">

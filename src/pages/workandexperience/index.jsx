@@ -58,7 +58,7 @@ function WorkandExperiencePage() {
           id={"inter-collabonature"}
           id2={"inter-collabonature(2)"}
         />
-        <Carousel
+        <Carousel2
           data={rendered}
           data2={rendered2}
           id={"render"}
@@ -74,7 +74,7 @@ function WorkandExperiencePage() {
         <CarouselSm2 data={Banner} data2={Game} id={"banner(3)"} id2={"game"} />
         {/* <Carousel1 data={Banner} id={"banner(3)"} />
         <Carousel1 data={Game} id={"game"} /> */}
-        <Carousel data={bkmap} id={"mapping"} />
+        <Carousel data={bkmap} id={"urban planning"} />
         <Carousel data={housetypo} id={"house typo"} />
         <CarouselSm data={OakVille} id={"oakville"} />
         <Carousel2 data={Road} data2={Road2} id={"road"} id2={"road(2)"} />

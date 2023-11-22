@@ -9,7 +9,7 @@ const CarouselSm = ({ data, id }) => {
           {data.map((el, index) => {
             return (
               <div
-                className={`img-class-sm m-[10px] bg-cover bg-center h-[400px] w-[100px]`}
+                className={`img-class-sm bg-cover bg-center h-[400px] w-[50px] m-[5px] lg:m-[10px] lg:h-[400px] lg:w-[100px]`}
                 style={{ backgroundImage: `url(${el.src})` }}
               >
                 <div>{index + 1}</div>
