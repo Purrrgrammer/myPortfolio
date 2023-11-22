@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+* {
+  font-family: Aquire;
+}
+.page,
+.education {
+  padding: 80px 100px 100px 50px;
+}
+
+.toggle {
+  background-color: red;
+  top: 300px;
+  opacity: 1;
+}
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+}
+
+.img-class,
+.img-class-sm {
+  /* height: 400px;
+  width: 100px; */
+  transition: width 0.7s;
+  position: relative;
+}
+.img-class:hover {
+  width: 700px;
+  z-index: 3;
+  cursor: pointer;
+}
+.img-class > * {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.img-class-sm:hover {
+  width: 400px;
+  z-index: 3;
+  cursor: pointer;
+}
+.img-class-sm > * {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}

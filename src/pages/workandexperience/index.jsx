@@ -1,16 +1,32 @@
 import React from "react";
 import { experience } from "../../resource/index";
-import WorkCard from "../../components/cards/card1";
+// import WorkCard from "../../components/cards/card1";
 import {
-  tuImages,
   threeddesign,
   threeddesign2,
+  rendered,
+  rendered2,
 } from "../../resource/tuwork/index";
+import { Design, Design2, Banner, Game } from "../../resource/Design/index2";
+import { Envi } from "../../resource/Sabuy 3D/index";
+import Navbar from "../../components/navbar";
+import {
+  OakVille,
+  Road,
+  Road2,
+  bkmap,
+  etc,
+  housetypo,
+} from "../../resource/urban planning";
+import Carousel from "../../components/carousel/Carousel";
+import Carousel2 from "../../components/carousel/Carousel2";
+import CarouselSm from "../../components/carousel/CarouselSm";
+import CarouselSm2 from "../../components/carousel/CarouselSm2";
+import ProjectJumper from "../../components/ProjectJumper/ProjectJumper";
 function WorkandExperiencePage() {
   return (
     <React.Fragment>
-      {/* <div className='m-4'>
-            </div> */}
+      <Navbar />
       <div className="pt-16 page">
         <section className="experience my-4">
           <h1 className="text-3xl ml-2">Experience</h1>
@@ -35,63 +51,34 @@ function WorkandExperiencePage() {
             })}
           </ol>
         </section>
-
-        <section className="work mb-4">
-          <h1 className="text-3xl ml-2">Inter-CollaboNature</h1>
-          <div className="flex items-center max-w-none gap-x-4">
-            {threeddesign.map((el, index) => {
-              return <WorkCard src={el.src} key={index} />;
-            })}
-          </div>
-        </section>
-
-        <section className="3d">
-          <h1 className="text-3xl ml-2">Inter-CollaboNature(2)</h1>
-          <div className="flex items-center max-w-none gap-x-4">
-            {threeddesign2.map((el, index) => {
-              return (
-                <img
-                  alt="my design"
-                  key={index}
-                  src={el.src}
-                  className="transition ease-in-out duration-700 hover:duration-700 hover:ease-in-out
-                        flex-1 h-80 object-cover overflow-hidden object-center cursor-pointer hover:object-center hover:overflow-hidden hover:flex-auto"
-                />
-              );
-            })}
-          </div>
-        </section>
-
-        <section className="work">
-          <h1 className="text-3xl ml-2">etc.</h1>
-          <div className="flex items-center max-w-none gap-x-4">
-            {tuImages.map((el, index) => {
-              return (
-                <img
-                  alt="TU works"
-                  key={index}
-                  src={el.src}
-                  className="transition ease-in-out duration-700 hover:duration-700 hover:ease-in-out
-                        flex-1 h-80 object-cover overflow-hidden object-center cursor-pointer hover:object-center hover:overflow-hidden hover:flex-auto"
-                />
-              );
-            })}
-          </div>
-        </section>
-
-        {/* <section className='artwork'>
-                <h1 className='text-3xl ml-2'>artwork</h1>
-                <div className='flex items-center max-w-none gap-x-4'>
-                    {tuImages.map((el, index) => {
-                        return (
-                            <img key={index} src={el.src} className='transition ease-in-out duration-700 hover:duration-700 hover:ease-in-out
-                        flex-1 h-80 object-cover overflow-hidden object-center cursor-pointer hover:object-center hover:overflow-hidden hover:flex-auto' />
-                        )
-                    })}
-                </div>
-            </section> */}
-
-        <section className="project"></section>
+        <ProjectJumper />
+        <Carousel2
+          data={threeddesign}
+          data2={threeddesign2}
+          id={"inter-collabonature"}
+          id2={"inter-collabonature(2)"}
+        />
+        <Carousel
+          data={rendered}
+          data2={rendered2}
+          id={"render"}
+          id2={"render(2)"}
+        />
+        <Carousel data={Envi} id={"3d"} />
+        <CarouselSm2
+          data={Design}
+          data2={Design2}
+          id={"banner"}
+          id2={"banner(2)"}
+        />
+        <CarouselSm2 data={Banner} data2={Game} id={"banner(3)"} id2={"game"} />
+        {/* <Carousel1 data={Banner} id={"banner(3)"} />
+        <Carousel1 data={Game} id={"game"} /> */}
+        <Carousel data={bkmap} id={"mapping"} />
+        <Carousel data={housetypo} id={"house typo"} />
+        <CarouselSm data={OakVille} id={"oakville"} />
+        <Carousel2 data={Road} data2={Road2} id={"road"} id2={"road(2)"} />
+        <CarouselSm data={etc} id={"etc"} />
       </div>
     </React.Fragment>
   );

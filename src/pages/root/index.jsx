@@ -1,17 +1,23 @@
 import React from "react";
 import Navbar from "../../components/navbar";
-import App from "../../App";
 import { Outlet } from "react-router-dom";
+import Greetings from "./greetings";
 
 const Root = () => {
   return (
-    <div>
-      <Navbar />
-      <div id="detail">
-        <Outlet />
-      </div>
-      <App />
-    </div>
+    <>
+      <header>
+        <Navbar />
+      </header>
+      <main>
+        <div className="p-48">
+          <Greetings />
+        </div>
+        <div id="detail">
+          <Outlet />
+        </div>
+      </main>
+    </>
   );
 };
 

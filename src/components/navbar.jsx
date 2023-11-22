@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
+// import { Link } from "react-router-dom";
+
 function Navbar() {
   const [isToggle, setIsToggle] = useState(false);
 
@@ -8,11 +10,14 @@ function Navbar() {
     if (window.innerWidth > 720) {
       setIsToggle(true);
     }
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setIsToggle(true)
+    if (window.innerWidth < 720) {
+      setIsToggle(false);
+    }
+    window.addEventListener("resize", () =>
+      window.innerWidth <= 960 ? setIsToggle(false) : setIsToggle(true)
     );
   }, []);
+
   const toggle = React.useCallback(
     () => setIsToggle((state) => !state),
     [setIsToggle]
@@ -21,10 +26,11 @@ function Navbar() {
   const links = [
     { name: "about", path: "/about" },
     { name: "work/experience", path: "/worknexperience" },
+    { name: "projects", path: "/projects" },
   ];
   const mediaChannel = [
     { name: "github", path: "https://github.com/Purrrgrammer" },
-    { name: "lkn:woramjvic", path: "https://www.linkedin.com/in/woramjvic/" },
+    { name: "in:woramjvic", path: "https://www.linkedin.com/in/woramjvic/" },
     {
       name: "woram.j.vic@gmail.com",
       path: "https://www.linkedin.com/in/woramjvic/",
@@ -36,7 +42,7 @@ function Navbar() {
     <nav className="bg-white border-gray-200 dark:bg-gray-900 w-full fixed max-x-screen-xl flex justify-between flex-wrap items-center mx-auto p-4 px-[100px] z-2">
       <a href="/home">
         <img
-          src="https://scontent.fbkk12-3.fna.fbcdn.net/v/t39.30808-6/312167791_441575541390422_3599715184732973856_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Xgv_W8bK_BcAX8ZyT3-&_nc_ht=scontent.fbkk12-3.fna&oh=00_AfAY-y_TPshBO5iaPneUF0-48Teml7SeeHQL0m7gprLlZQ&oe=6556A96E"
+          src="/resources/Pictures/WVBrandnameStoreAI.png"
           className="h-10 mr-3"
           alt="WVLogo"
         />
@@ -48,7 +54,7 @@ function Navbar() {
         className={`
         ${
           isToggle ? "-bottom-28 opacity-100 " : "opacity-0 -top-30"
-        } my-2 trasnsition-all ease-in duration-500 absolute w-full md:py-4 xs:opacity-100 left-0 md:w-auto md:static z-[-1] md:-top-120px md:z-auto md:flex md:items-center md:p-0 md:dark:bg-gray-900 md:flex-row md:space-x-8 md:mt-0 flex-col font-medium p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:border-0 bg-white md:bg-gray dark:bg-gray-800 dark:border-gray-700`}
+        } my-2 trasnsition-all ease-in duration-500 absolute w-full md:py-4 left-0 md:w-auto md:static z-[-1] md:-top-120px md:z-auto md:flex md:items-center md:p-0 md:dark:bg-gray-900 md:flex-row md:space-x-8 md:mt-0 flex-col font-medium p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:border-0 bg-white md:bg-gray dark:bg-gray-800 dark:border-gray-700`}
       >
         {links.map((link, index) => (
           <li className="px-2" key={index}>
@@ -102,7 +108,13 @@ function Navbar() {
                     className="px-4 py-1 hover:bg-gray-100 border-b"
                     key={index}
                   >
-                    <a href={link.path} target="_blank" rel="noreferrer">
+                    {/* rel="noreferrer" */}
+                    <a
+                      href={link.path}
+                      target="_blank"
+                      without
+                      rel="noreferrer"
+                    >
                       {link.name}
                     </a>
                   </li>

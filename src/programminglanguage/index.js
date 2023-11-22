@@ -18,11 +18,19 @@ export const programmingLanguage = [
     name: "csharp",
     url: "https://static-00.iconduck.com/assets.00/c-sharp-c-icon-1822x2048-wuf3ijab.png",
   },
+  {
+    name: "python",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png",
+  },
 ];
 export const JSframework = [
   {
     name: "react",
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
+  },
+  {
+    name: "angular",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png",
   },
 ];
 export const cssFramework = [

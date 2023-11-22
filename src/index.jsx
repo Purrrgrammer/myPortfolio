@@ -6,7 +6,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/home";
 import AboutPage from "./pages/about";
 import WorkandExperiencePage from "./pages/workandexperience/index";
+import ProjectsPage from "./pages/projects/index";
 import Root from "./pages/root";
+import Greetings from "./pages/root/greetings";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
   {
@@ -14,21 +17,31 @@ const router = createBrowserRouter([
     element: <Root />,
     children: [
       {
-        path: "/home",
-        element: <HomePage />,
-      },
-      {
-        path: "/about",
-        element: <AboutPage />,
-      },
-      {
-        path: "/worknexperience",
-        element: <WorkandExperiencePage />,
+        path: "/greetings",
+        index: true,
+        element: <Greetings />,
       },
     ],
   },
-]);
+  {
+    path: "/home",
+    index: true,
+    element: <HomePage />,
+  },
 
+  {
+    path: "/about",
+    element: <AboutPage />,
+  },
+  {
+    path: "/worknexperience",
+    element: <WorkandExperiencePage />,
+  },
+  {
+    path: "/projects",
+    element: <ProjectsPage />,
+  },
+]);
 root.render(
   <React.StrictMode>
     <RouterProvider router={router}></RouterProvider>
