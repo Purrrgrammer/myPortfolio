@@ -30,8 +30,11 @@ function Navbar() {
     { name: "projects", path: "/projects" },
   ];
   const mediaChannel = [
-    { name: "github", path: "https://github.com/Purrrgrammer" },
-    { name: "in:woramjvic", path: "https://www.linkedin.com/in/woramjvic/" },
+    { name: "github:purrrgrammer", path: "https://github.com/Purrrgrammer" },
+    {
+      name: "linkedin:woramjvic",
+      path: "https://www.linkedin.com/in/woramjvic/",
+    },
     {
       name: "woram.j.vic@gmail.com",
       path: "https://www.linkedin.com/in/woramjvic/",

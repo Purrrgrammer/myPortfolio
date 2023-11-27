@@ -8,9 +8,11 @@ html {
 * {
   font-family: Aquire;
 }
-.page,
-.education {
-  padding: 80px 100px 100px 50px;
+.page {
+  padding: 70px 100px 100px 50px;
+}
+.section {
+  padding: 50px 100px 100px 50px;
 }
 
 .toggle {
@@ -49,4 +51,10 @@ html {
   position: absolute;
   top: 10px;
   left: 10px;
+}
+
+@media screen and (min-width: 400px) {
+  .section {
+    padding: 50px 20px 20px 20px;
+  }
 }

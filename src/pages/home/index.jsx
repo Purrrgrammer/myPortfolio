@@ -10,15 +10,15 @@ function HomePage() {
         <div className='bg-[url("https://e1.pxfuel.com/desktop-wallpaper/18/270/desktop-wallpaper-1-batcave-batman-cave.jpg")] bg-cover h-full'>
           <div className="flex flex-row justify-between items-center ml-14 md:ml-28 lg:ml-28 py-4">
             <div>
-              <h1 className="text-white text-4xl lg:text-5xl ">
+              <h1 className="text-white text-2xl md:text-4xl ">
                 Hello, World !
               </h1>
             </div>
-            <div className="">
-              <h1 className="text-white text-lg lg:text-5xl">
+            <div className="my-6">
+              <h1 className="text-white text-sm md:text-4xl">
                 I'm Woramongkol Vichayaworanan
               </h1>
-              <p className="text-white text-lg lg:text-5xl">
+              <p className="text-white text-sm md:text-4xl">
                 a frontend developer based in Bangkok, Thailand.
               </p>
             </div>
@@ -41,12 +41,12 @@ function HomePage() {
                 {el.skills.map((language, index) => (
                   <div
                     key={index}
-                    className="mx-10 hover:scale-125 transition transition ease-in-out"
+                    className="mx-4 md:mx-10 hover:scale-125 transition transition ease-in-out"
                   >
                     <img
                       src={language.url}
                       alt={language.name}
-                      className="h-10 md:h-20"
+                      className="w-10 md:w-20 object-contain"
                     />
                   </div>
                 ))}

@@ -5,19 +5,19 @@ function AboutPage() {
   return (
     <>
       <Navbar />
-      <div className="pt-16 page">
+      <div className="page">
         <div className="m-4 p-2 lg:p-10 text-base lg:text-3xl ">
-          A College graduate equipped with comprehensive aspect of real estate
-          market analysis, project management for real estate development,
-          feasibility, facility management, and graphic desinging. For extent,
-          having a good interpersonal communication, professional attitute,
-          hands-on with various software, adaptive in diverse environment with
-          willingness to grow within continuous personal and professional
-          development. Seeking for a challenging role to leverage myself within
-          a career progressive.
+          A passionate frontend developer with the previos backgrourd of graphic
+          desinging, comprehensive aspect of real estate market analysis,
+          project management for real estate development, feasibility, and
+          facility management. For extent, having a good interpersonal
+          communication, professional attitute, hands-on with various software,
+          adaptive in diverse environment with willingness to grow within
+          continuous personal and professional development. Seeking for a
+          challenging role to leverage myself within a career progressive.
         </div>
-        <section className="education">
-          <h1 className="text-3xl ml-2">education</h1>
+        <section className="">
+          <h1 className="text-3xl section">education</h1>
           <ol class="relative border-l border-gray-200 dark:border-gray-700 ml-4">
             {education.map((edu, index) => {
               return (

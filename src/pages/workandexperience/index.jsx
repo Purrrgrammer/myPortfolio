@@ -27,9 +27,9 @@ function WorkandExperiencePage() {
   return (
     <React.Fragment>
       <Navbar />
-      <div className="pt-16 page">
-        <section className="experience my-4">
-          <h1 className="text-3xl ml-2">Experience</h1>
+      <div className="page">
+        <section className="exp">
+          <h1 className="text-3xl section">Experience</h1>
           <ol class="relative border-l border-gray-200 dark:border-gray-700 ml-4">
             {experience.map((exp, index) => {
               return (

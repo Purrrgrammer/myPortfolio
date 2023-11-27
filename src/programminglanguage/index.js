@@ -45,7 +45,7 @@ export const cssFramework = [
 ];
 
 export const softwareSkills = [
-  { name: "programming language", skills: programmingLanguage },
+  { name: "programming", skills: programmingLanguage },
   { name: "Library", skills: JSframework },
   { name: "css framework", skills: cssFramework },
 ];
